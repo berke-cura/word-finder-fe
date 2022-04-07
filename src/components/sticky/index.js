@@ -1,4 +1,3 @@
-import * as Styled from './style'
 import {Title} from '../../components'
 import {NavBar} from '../../components'
 

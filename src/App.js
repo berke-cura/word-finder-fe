@@ -1,25 +1,20 @@
 import './App.css';
 import * as Styled from './style'
-import { Title } from './components'
-import { NavBar } from './components'
 import { SectionContainer } from './components'
 import { Sticky } from './components'
+import { SearchWord } from './components'
 
 
 
 const App = () => {
 
   return (
+    
     <Styled.Container>
       <Sticky/>
-      {/* <Title/>
-      <NavBar/>
-      </Sticky> */}
       <SectionContainer>
+        <SearchWord/>
       </SectionContainer>
-    
-      
-
     </Styled.Container>
   )
 }

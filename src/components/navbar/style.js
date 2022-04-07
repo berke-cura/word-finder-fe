@@ -10,6 +10,7 @@ export const Bar = styled.div`
     color: black;
     font-weight: bold;
     padding: auto;
+
 `
 
 export const Section1 = styled.div`

@@ -1,4 +1,6 @@
 import * as Styled from './style'
+import {SearchWord} from '../../components'
+
 
 
 const SectionContainer =  () => {
@@ -6,7 +8,8 @@ const SectionContainer =  () => {
     return (
         <Styled.Background>
             <Styled.Box>
-                <p>HELLO WORLD</p>
+                <p></p>
+                <SearchWord/>
             </Styled.Box>
         </Styled.Background>
     )

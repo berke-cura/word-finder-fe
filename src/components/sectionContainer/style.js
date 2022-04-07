@@ -10,8 +10,10 @@ export const Box = styled.div`
     @media screen and (max-width: 768px) {
         width: 85%;
     }
+    text-align: center;
     width: 75%;
     height: 100vh;
     margin: auto;
     background-color: #E3CAA5;
+    
 `

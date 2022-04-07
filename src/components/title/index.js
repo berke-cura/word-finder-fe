@@ -4,7 +4,7 @@ const Title =  () => {
 
     return (
        <Styled.TitleBox>
-           <Styled.title>WORD FINDER</Styled.title>
+           <Styled.Title>WORD FINDER</Styled.Title>
            </Styled.TitleBox>    
     )
 }
