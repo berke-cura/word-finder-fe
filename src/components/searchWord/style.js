@@ -188,6 +188,35 @@ export const InputSulo = styled.input`
 }  
 `
 
+export const LetterBox = styled.input`
+  padding: 13px 20px;
+  height: 32px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 5%;
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+  outline: none;
+  color: #c4c3ca;
+  background-color: #1f2029;
+  border: none;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+  ::-webkit-inner-spin-button{
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+::-webkit-outer-spin-button{
+    -webkit-appearance: none; 
+    margin: 0; 
+}  
+`
+
 export const CounterButton = styled.button`
 display: flex;
 margin-left: 0.2rem;

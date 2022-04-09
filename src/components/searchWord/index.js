@@ -2,6 +2,7 @@ import * as Styled from './style'
 import React, { useState, useEffect } from 'react';
 import RICIBs from 'react-individual-character-input-boxes';
 import { SectionContainer } from '../../components'
+import LetterBox from '../LetterBox';
 
 const SearchWord =  () => {
     const [letterCount, setLetterCount] = useState(1)
@@ -9,7 +10,6 @@ const SearchWord =  () => {
     const [existLetters, setExistLetters] = useState([])
     const [notExistLet, setNotExistLet] = useState([])
     const [placementLetters, setPlacementLetters] = useState([])
-
     const inputStyle = {
       "padding": "13px 20px",
       "height": "32px",
@@ -56,11 +56,20 @@ const SearchWord =  () => {
         var r = dummy.map((item, i) => {
           return { style: inputStyle}
         })
-        
          setInputProps(r)
         }
       }, [letterCount])
-
+      function getData (value) {
+        let array = placementLetters
+        console.log(array)
+        console.log(value.id)
+       
+        
+      
+        setPlacementLetters([...placementLetters, value])
+        /* setPlacementLetters(list)
+        console.log(placementLetters) */
+      }
 
     return (
         <Styled.Container>
@@ -79,13 +88,10 @@ const SearchWord =  () => {
               <Styled.InputContainer>
                     <Styled.Label1>Placement Letters:</Styled.Label1>
                     <Styled.Group>
-                    <RICIBs
-                     amount={letterCount === 0 ? 1 : letterCount}
-                     autoFocus
-                     inputProps={inputProps}
-                     handleOutputString={handlePlacement}
-                     inputRegExp={/^[A-Za-z][A-Za-z0-9]*$/}
-                   />
+                        {
+                          Array.from( Array(letterCount), (e, i) => {
+                            return  <LetterBox id={i} sendData={getData}/>
+                        })}
                   </Styled.Group>
                 
                 </Styled.InputContainer>
