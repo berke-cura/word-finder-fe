@@ -22,7 +22,7 @@ const SearchWord =  () => {
     const handleSubmit = (event) => {
         // prevents the submit button from refreshing the page
         event.preventDefault();
-        console.log(searchInfo);
+        console.log(searchInfo); 
       };
 
 
@@ -46,45 +46,53 @@ const SearchWord =  () => {
        }
     
     return (
-        <Styled.Form>
+        <Styled.Container>
           <Styled.InputArea>
-          <Styled.Label1>Letter Count:</Styled.Label1>
-          <Styled.Input1
-            type="number"
-            name="letterCount"
-            value={searchInfo.letterCount}
-            onChange={handleChangeA}
-            max="22"
-          /><p/>
 
-          <Styled.Label2>Existing Letters:</Styled.Label2>
-          <Styled.Input2
-            type="text"
-            name="existLetters"
-            placeholder="a,d,n"
-            value={(searchInfo.existLetters)}
-            onChange={handleChange}
-          /><p/>
+              <Styled.InputContainer>
+                    <Styled.Label1>Letter Count:</Styled.Label1>
+                    <Styled.Input1
+                       type="number"
+                       name="letterCount"
+                       value={searchInfo.letterCount}
+                       onChange={handleChangeA}
+                       max="22"
+                     />
+              </Styled.InputContainer>
 
-          <Styled.Label3>Not Existing Letters:</Styled.Label3>
-          <Styled.Input3
-            type="text"
-            name="notExistLet"
-            placeholder="c,b"
-            value={(searchInfo.notExistLet)}
-            onChange={handleChange}
-          />
+              <Styled.InputContainer>
+                   <Styled.Label2>Existing Letters:</Styled.Label2>
+                   <Styled.Input2
+                     type="text"
+                     name="existLetters"
+                     placeholder="a,d,n"
+                     value={(searchInfo.existLetters)}
+                     onChange={handleChange}
+                   />
+              </Styled.InputContainer>
+          
+              <Styled.InputContainer>
+                    <Styled.Label3>Not Existing Letters:</Styled.Label3>
+                    <Styled.Input3
+                      type="text"
+                      name="notExistLet"
+                      placeholder="c,b"
+                      value={(searchInfo.notExistLet)}
+                      onChange={handleChange}
+                    />
+                </Styled.InputContainer>
+
           </Styled.InputArea>
-          <Styled.OutputArea>
-            <p>asd</p>
-          </Styled.OutputArea>
-          <Styled.LetterBoxes>
-            <div>{renderInputs(searchInfo.letterCount)}</div>
-          </Styled.LetterBoxes>
-          <Styled.SearchButton onClick={handleSubmit}>SEARCH
-{/*             <button onClick={handleSubmit}>SEARCH</button>
- */}          </Styled.SearchButton>
-        </Styled.Form>
+
+          <Styled.ResultContainer>         
+               <Styled.LetterBoxes>
+                 <div>{renderInputs(searchInfo.letterCount)}</div>
+               </Styled.LetterBoxes>
+          </Styled.ResultContainer>
+
+          <Styled.SearchButton onClick={handleSubmit}>SEARCH</Styled.SearchButton>
+          
+        </Styled.Container>
     )
 }
 export default SearchWord
