@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 
-export const Form = styled.div`
+export const Container = styled.div`
   flex-direction: row;
   @media screen and (max-width: 768px) {
         width: 80%;
@@ -20,25 +20,18 @@ export const Form = styled.div`
 export const InputArea = styled.div`
  @media screen and (max-width: 1024) {
         width: 50%;
-        padding: 10px;
     }
  @media screen and (max-width: 768px) {
         width: 80%;
-        padding: 10px;
-        margin: auto;
-        margin-top: 5%;
         font-size: 15px;
       }
-  grid-row:1;
   background-color: #CEAB93;  
-  padding: 10px;
-  margin-left:5%;
-  margin-top: 4%;
   border: 3px solid black;
   border-radius: 5px;
+  flex-direction: column;
 `
 
-export const OutputArea = styled.div`
+export const ResultContainer = styled.div`
   background-color: #CEAB93;  
   padding: 160px;
   margin-left:5%;
@@ -141,4 +134,8 @@ font-weight: bolder;
 margin-left: 5%;
 margin-bottom: 10px;
 
+`
+
+export const InputContainer = styled.div`
+        
 `
