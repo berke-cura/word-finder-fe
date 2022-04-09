@@ -13,6 +13,7 @@ export const Box = styled.div`
     width: 75%;
     height: 100vh;
     margin: auto;
+    flex-direction: row;
     background-color: #E3CAA5;
     
 `

@@ -3,7 +3,16 @@ import styled from 'styled-components'
 
 
 export const Form = styled.div`
-  display: grid;
+  flex-direction: row;
+  @media screen and (max-width: 768px) {
+        width: 80%;
+        padding: 10px;
+        margin: auto;
+        margin-top: 5%;
+        font-size: 15px;
+        flex-direction: column;
+      }
+  display: flex;
     &:focus {
 }
 `
