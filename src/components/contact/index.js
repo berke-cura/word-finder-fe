@@ -1,71 +1,56 @@
+import { useState } from 'react'
 import * as Styled from './style'
-import { 
-    Formik, 
-    Form, 
-    Field,
-    ErrorMessage
-  } from 'formik'
+
 
 
 const Contact = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [subject, setSubject] = useState('');
+    const [message, setMessage] = useState('');
+
+    function submitHandler (){
+        const body = {
+            name,
+            email,
+            subject,
+            message
+        }
+        const url = "https://backend_url"
+
+        console.log(body)
+        // Axios Request
+    } 
+
 
     return(
         <Styled.Container>
-        <Formik
-        initialValues={{
-          name: '',
-          email: '',
-          message: '',
-        }}
-        onSubmit={(values, actions) => {
-          alert(JSON.stringify(values, null, 2));
-          actions.setSubmitting(false);
-          console.log("-----------")
-        }}
-        validate={values => {
-            const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-            const errors = {};
-            if(!values.name) {
-              errors.name = 'Name Required'
-            }
-            if(!values.email || !emailRegex.test(values.email)) {
-              errors.email = 'Valid Email Required'
-            }
-            if(!values.message) {
-              errors.message = 'Message Required'
-            }
-            return errors;
-          }}
-      >
-      {() => (
-        <Form>
-          <Styled.Label>Name: </Styled.Label>
-          <Styled.Input name="name" />
-          <Styled.ErrorMessage>
-          <ErrorMessage name="name" />
-          </Styled.ErrorMessage>
-          
 
-    
-          <Styled.Label>Email: </Styled.Label>
-          <Styled.Input name="email" />
-          <Styled.ErrorMessage>
-          <ErrorMessage name="email" />
-          </Styled.ErrorMessage>
+            <Styled.InputForm>
+                
+                <Styled.SingleInputContainer>
+                    <Styled.InputTitle>Name</Styled.InputTitle>
+                    <Styled.Input onChange={(event) => setName(event.target.value) }/> 
+                </Styled.SingleInputContainer>
 
-    
-          <Styled.Label>Message: </Styled.Label>
-          <Field name="message" component="textarea"/>
-          <Styled.ErrorMessage>
-          <ErrorMessage name="message" />
-          </Styled.ErrorMessage>
+                <Styled.SingleInputContainer>
+                    <Styled.InputTitle>Email</Styled.InputTitle>
+                    <Styled.Input onChange={(event) => setEmail(event.target.value) }/>
+                </Styled.SingleInputContainer>
 
+                <Styled.SingleInputContainer>
+                    <Styled.InputTitle>Subject</Styled.InputTitle>
+                    <Styled.Input onChange={(event) => setSubject(event.target.value) } />
+                </Styled.SingleInputContainer>
 
-    
-          <button type="submit">Send</button>
-        </Form>
-      )}
-      </Formik>
+                <Styled.SingleInputContainer>
+                    <Styled.InputTitle>Message</Styled.InputTitle>
+                    <Styled.InputTextArea onChange={(event) => setMessage(event.target.value) } />
+                </Styled.SingleInputContainer>
+
+            </Styled.InputForm>
+
+            <Styled.SubmitButton onClick={submitHandler}> Submit </Styled.SubmitButton> 
       </Styled.Container>
         )
         
