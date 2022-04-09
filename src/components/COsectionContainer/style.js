@@ -15,5 +15,4 @@ export const Box = styled.div`
     margin: auto;
     flex-direction: row;
     background-color: #E3CAA5;
-    
 `

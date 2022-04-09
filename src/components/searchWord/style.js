@@ -4,6 +4,8 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   flex-direction: row;
+  margin-top: 1.45%;
+
   @media screen and (max-width: 768px) {
         width: 80%;
         padding: 10px;
@@ -14,6 +16,7 @@ export const Container = styled.div`
       }
   display: flex;
     &:focus {
+    
 }
 `
 

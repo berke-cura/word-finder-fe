@@ -1,5 +1,7 @@
 import * as Styled from './style'
 import React, { useState } from 'react';
+import { SectionContainer } from '../../components'
+
 
 
 const SearchWord =  () => {
@@ -47,6 +49,7 @@ const SearchWord =  () => {
     
     return (
         <Styled.Container>
+
           <Styled.InputArea>
 
               <Styled.InputContainer>
@@ -91,8 +94,8 @@ const SearchWord =  () => {
           </Styled.ResultContainer>
 
           <Styled.SearchButton onClick={handleSubmit}>SEARCH</Styled.SearchButton>
-          
         </Styled.Container>
+        
     )
 }
 export default SearchWord
