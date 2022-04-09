@@ -1,6 +1,7 @@
 import * as Styled from './style'
 import React, { useState, useEffect } from 'react';
 import RICIBs from 'react-individual-character-input-boxes';
+import { SectionContainer } from '../../components'
 
 const SearchWord =  () => {
     const [letterCount, setLetterCount] = useState(1)
@@ -63,6 +64,7 @@ const SearchWord =  () => {
 
     return (
         <Styled.Container>
+
           <Styled.InputArea>
 
               <Styled.InputContainer>
@@ -109,8 +111,8 @@ const SearchWord =  () => {
 
 
           <Styled.SearchButton onClick={handleSubmit}>SEARCH</Styled.SearchButton>
-          
         </Styled.Container>
+        
     )
 }
 export default SearchWord
