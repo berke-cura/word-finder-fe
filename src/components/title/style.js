@@ -12,7 +12,7 @@ export const TitleBox = styled.div`
 
 export const Title = styled.div`
     @media screen and (max-width: 767px) {
-        font-size: 12vmin;
+        font-size: 13vmin;
         letter-spacing: 0em;
     }
     color: #AD8B73;

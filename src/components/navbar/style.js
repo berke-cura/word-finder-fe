@@ -6,29 +6,24 @@ export const Bar = styled.div`
     }
     display: flex;
     background-color: #CEAB93;
-    letter-spacing: 0.2em;
     color: black;
     font-weight: bold;
     padding: auto;
 
 `
+export const MenuItem = styled.div`
+@media screen and (max-width: 768px) {
+        font-size: 13px;
+        padding: 0px 10px;
+        letter-spacing: 0.0em;
 
-export const Section1 = styled.div`
-    margin: auto;
-    background-color: #FFFBE9;
-    &:hover {
-        background-color: #AD8B73;
     }
-`
-export const Section2 = styled.div`
+    letter-spacing: 0.2em;
+    height: 5.2vh;
+    display: flex;
+    align-items: center;
     margin: auto;
-    background-color: #FFFBE9;
-    &:hover {
-        background-color: #AD8B73;
-    }
-`
-export const Section3 = styled.div`
-    margin: auto;
+    padding: 0px 10px;
     background-color: #FFFBE9;
     &:hover {
         background-color: #AD8B73;

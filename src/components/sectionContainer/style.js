@@ -7,7 +7,7 @@ export const Background = styled.div`
 `
 
 export const Box = styled.div`
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width:820px) {
         width: 85%;
     }
     width: 75%;
