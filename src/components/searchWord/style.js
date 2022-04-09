@@ -28,10 +28,15 @@ export const InputArea = styled.div`
         width: 80%;
         font-size: 15px;
       }
-  background-color: #CEAB93;  
-  border: 3px solid black;
-  border-radius: 5px;
-  flex-direction: column;
+  background-color: #ecf0f1;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 50%;
+ box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+   rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+   rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+   rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+   rgba(0, 0, 0, 0.09) 0px -3px 5px;
 `
 
 export const ResultContainer = styled.div`

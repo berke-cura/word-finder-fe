@@ -7,9 +7,10 @@ const SWsectionContainer =  () => {
 
     return (
         <Styled.Background>
-            <Styled.Box>      <SearchWord/>
-</Styled.Box>
-            </Styled.Background>
+            <Styled.Box>      
+                <SearchWord/>
+            </Styled.Box>
+        </Styled.Background>
 
     )
 }

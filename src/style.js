@@ -4,7 +4,6 @@ export const Container = styled.div`
     height: 100%;
     width: 100%;
     position: absolute;
-    overflow: hidden;
     background-color: #AD8B73;
 `
 export const Bar = styled.div`
@@ -19,7 +18,6 @@ export const Bar = styled.div`
     font-weight: bold;
     padding-left: 30%;
     padding-right: 30%;
-    overflow: hidden;
 `
 export const MenuItem = styled.div`
 @media screen and (max-width: 768px) {
