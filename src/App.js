@@ -17,10 +17,14 @@ const Layout = ({activePage}) => {
   }
 }
 
+function updateLayout (string) {
+  if(string==='home') setActivePage('home')
+}
+
 return(
     <Styled.Container>
     <Styled.Header>
-    <Title/>
+    <Title updateLayout={updateLayout}/>
     <Styled.Bar>
             <Styled.MenuItem  onClick={() => setActivePage('home')}><NavLink to="/" style={{ textDecoration: 'none' , color: 'black'}}>HOME</NavLink></Styled.MenuItem>  
             <Styled.MenuItem onClick={() => setActivePage('faq')}><NavLink to="/faq" style={{ textDecoration: 'none',  color: 'black' }}>FAQ</NavLink></Styled.MenuItem>
