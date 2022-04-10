@@ -9,8 +9,8 @@ const SearchWord =  () => {
     const [letterCount, setLetterCount] = useState(1)
     const [inputProps, setInputProps] = useState([])
     const [existLetters, setExistLetters] = useState([])
-    const [notExistLet, setNotExistLet] = useState([])
-    const [placementLetters, setPlacementLetters] = useState([])
+    const [notExistLetter, setNotExistLetter] = useState([])
+    const [placementLetters, setPlacementLetters] = useState( Array(15).fill("-"))
     const inputStyle = {
       "padding": "13px 20px",
       "height": "32px",
@@ -62,21 +62,32 @@ const SearchWord =  () => {
       }, [letterCount])
       function getData (value) {
         let array = placementLetters
-        console.log(array)
-        console.log(value.id)
- 
-        array.map((item, iter) => {
-          if(iter === value.id)
-          console.log("item: ", JSON.stringify(item));
-        })
+        array[value.id] = value.letter
        
-        
+       
       
-        setPlacementLetters([...placementLetters, value])
+        //setPlacementLetters([...placementLetters, value])
         /* setPlacementLetters(list)
         console.log(placementLetters) */
       }
 
+      function handleOnClick() {
+        console.log('exist: ', existLetters)
+        console.log('not exist:' , notExistLetter)
+        const a = placementLetters.map((item, i) => {
+          if(item !=="-"){
+            const b = {
+              place: i,
+              letter: item,
+            }
+            return b
+          }
+        })
+        const c = a.filter(item => item);
+
+        console.log('exact: ',c)
+      }
+  
     return (
         <Styled.Container>
 
@@ -86,7 +97,7 @@ const SearchWord =  () => {
               <Styled.Label1>Letter Count</Styled.Label1>
                         <Styled.Group>
                           <Styled.CounterButton onClick={()=> setLetterCount(letterCount+1)}>+</Styled.CounterButton>
-                                <Styled.InputSulo min="1" max="22" type="number" name="letterCount" placeholder="1" id="logemail" autoComplete="off" value={letterCount} onChange={(event => onChangeHandle(event))} />
+                                <Styled.InputSulo min="1" max="15" type="number" name="letterCount" placeholder="1" id="logemail" autoComplete="off" value={letterCount} onChange={(event => onChangeHandle(event))} />
                           <Styled.CounterButton onClick={()=> setLetterCount(letterCount-1)}>-</Styled.CounterButton>
 
                         </Styled.Group>
@@ -105,7 +116,7 @@ const SearchWord =  () => {
               <Styled.InputContainer>
                    <Styled.Label1>Existing Letters</Styled.Label1>
                    <Styled.Group>
-                   <Styled.InputLetters type="text" name="letterCount" placeholder="a,b,c,d,e" id="logemail" autoComplete="off"/>
+                   <Styled.InputLetters type="text" value={existLetters} name="letterCount" placeholder="a,b,c,d,e" id="logemail" autoComplete="off" onChange={(event)=> setExistLetters(event.target.value)}/>
                   </Styled.Group>
                    
               </Styled.InputContainer>
@@ -113,14 +124,14 @@ const SearchWord =  () => {
               <Styled.InputContainer>
                     <Styled.Label1>Not Existing Letters:</Styled.Label1>
                     <Styled.Group>
-                   <Styled.InputLetters type="text" name="letterCount" placeholder="a,b,c,d,e" id="logemail" autoComplete="off"/>
+                   <Styled.InputLetters type="text" name="letterCount" placeholder="a,b,c,d,e" id="logemail" autoComplete="off"  onChange={(event)=> setNotExistLetter(event.target.value)}/>
                   </Styled.Group>
                   
                 </Styled.InputContainer>
                 
                 <Styled.InputContainer>
                     <Styled.Group>
-                   <Styled.SubmitButton> Search</Styled.SubmitButton>
+                   <Styled.SubmitButton onClick={handleOnClick}> Search</Styled.SubmitButton>
                   </Styled.Group>
                   
                 </Styled.InputContainer>
