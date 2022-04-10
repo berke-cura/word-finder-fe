@@ -1,6 +1,9 @@
 import * as Styled from './style'
 
 const Result = () => {
+
+    const words = ["albacora","albacore","albahaca","albrecht","ambracan","ambsaces","arboloco","arbuscle","babouche","babracot","bobachee","caballed","caballer","caballos","cabarets","cabasset","cabassou","cabbaged","cabbages","cabbalah","cabbalas","cabecera","cabecudo","cabernet","cabestro","cabezone","cabezons","cableman","cablemen","cableway","caboceer","caboched","cabochon","caboclos","cabombas","caboodle","cabooses","caboshed","cabossed","cabotage","cabresta","cabresto","cabretta","cabreuva","cabstand","cobleman","cubalaya","cubangle","cubatory","cubature","cubehead","debacles","emblanch","embraced","embracer","embraces","embreach","fabaceae","labefact","labrusca","mobocrat","nabcheat","nubecula","poblacht","rebleach","rebraced","rebranch","rebroach","sebacate","subacute","subcaste","subcause","subchela","subclans","subclass","subcosta","subfocal","subocean","subraces","subscale","subspace","subtract","subucula","subvocal","tabanuco","tobaccoy","tobaccos","umbecast","umbeclad","umbracle","unbacked","unbraced","unbraces"]
+
     const ColoredLine = ({ color }) => (
         <hr
             style={{
@@ -17,15 +20,8 @@ const Result = () => {
             <Styled.ResultContainer>
                 <Styled.Title>Result</Styled.Title>
                 <ColoredLine color="#636e72"/>
-                <Styled.GradientBorder id="box" style={{display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      width: '400px',
-                      height: '200px',
-                      color: 'white',
-                      fontSize: '2.5rem'}}>
-                    Animated <br/>CSS<br/>Gradient Border
-                </Styled.GradientBorder>
+                {words.map((word) => (<><p>{word}</p><br/></>))}
+            
 
             </Styled.ResultContainer>
         </Styled.Container>
