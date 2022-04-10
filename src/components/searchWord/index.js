@@ -119,14 +119,7 @@ const SearchWord =  () => {
               </Styled.InputContainer>
               <Styled.InputContainer>
                     <Styled.Label>Placement Letters:</Styled.Label>
-                    <Styled.Group>
-                        {
-                          
-                          Array.from( Array(letterCount > 0 ? letterCount : 1), (e, i) => {
-                            return  <LetterBox id={i} sendData={getData}/>
-                        })}
-                  </Styled.Group>
-                
+                    <Styled.GroupB>{Array.from( Array(letterCount > 0 ? letterCount : 1), (e, i) => {return  <LetterBox id={i} sendData={getData}/>})}</Styled.GroupB>
                 </Styled.InputContainer>
                    
               <Styled.InputContainer>

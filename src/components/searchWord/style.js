@@ -35,6 +35,16 @@ border: 1px solid blue;
 margin: 10px;
 `
 
+export const GroupB = styled.div`
+@media only screen and (max-width: 600px) {
+  width: 270px;
+}
+text-align: center;
+border: 1px solid blue;
+margin: 10px;
+width: 350px;
+`
+
 export const InputSulo = styled.input`
 border: 1px solid black;
 margin: 10px;
@@ -71,6 +81,3 @@ border: 1px solid red;
 margin: 10px;
 `
 
-export const LetterPlace = styled.div`
-max-width: 280px;
-`
