@@ -2,11 +2,12 @@ import styled from 'styled-components'
 
 export const LetterBox = styled.input`
   padding: 13px 20px;
-  height: 32px;
+  height: 22px;
   align-items: center;
   text-align: center;
   justify-content: center;
-  width: 5%;
+  margin:1px;
+  width: 4%;
   font-weight: 500;
   border-radius: 4px;
   font-size: 18px;

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import RICIBs from 'react-individual-character-input-boxes';
 import { SectionContainer } from '../../components'
 import LetterBox from '../LetterBox';
+import Result from '../result'
 
 const SearchWord =  () => {
     const [letterCount, setLetterCount] = useState(1)
@@ -63,6 +64,11 @@ const SearchWord =  () => {
         let array = placementLetters
         console.log(array)
         console.log(value.id)
+ 
+        array.map((item, iter) => {
+          if(iter === value.id)
+          console.log("item: ", JSON.stringify(item));
+        })
        
         
       
@@ -111,12 +117,19 @@ const SearchWord =  () => {
                   </Styled.Group>
                   
                 </Styled.InputContainer>
+                
+                <Styled.InputContainer>
+                    <Styled.Group>
+                   <Styled.SubmitButton> Search</Styled.SubmitButton>
+                  </Styled.Group>
+                  
+                </Styled.InputContainer>
                
-
+                    
           </Styled.InputArea>
 
+          <Result/> 
 
-          <Styled.SearchButton onClick={handleSubmit}>SEARCH</Styled.SearchButton>
         </Styled.Container>
         
     )
