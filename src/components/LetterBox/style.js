@@ -11,5 +11,4 @@ export const LetterBox = styled.input.attrs({
   border: 1px solid black;
   width: 30px;
   height: 30px;
-
 `
