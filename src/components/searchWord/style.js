@@ -153,7 +153,7 @@ export const SubmitButton = styled.button`
   line-height: 28px;
   letter-spacing: 0.5px;
   outline: none;
-  color: ##2c3e50;
+  color: #2c3e50;
   background-color: #f1c40f;
   border: none;
   cursor: pointer;
