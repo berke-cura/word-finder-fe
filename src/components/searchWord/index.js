@@ -6,7 +6,7 @@ import Result from '../result'
 import axios from 'axios';
 
 const SearchWord =  () => {
-    const [letterCount, setLetterCount] = useState(1)
+    const [letterCount, setLetterCount] = useState(2)
     const [inputProps, setInputProps] = useState([])
     const [existLetters, setExistLetters] = useState([])
     const [notExistLetter, setNotExistLetter] = useState([])
@@ -34,9 +34,9 @@ const SearchWord =  () => {
 
       const onChangeHandle = (event) => {
         const count = event.target.value;
-        if(count > 16) setLetterCount(16)
-        if(count < 0) setLetterCount(0)
-        if(count < 16 && count >= 0 ) setLetterCount(count)
+        if(count > 15) setLetterCount(15)
+        if(count < 2) setLetterCount(2)
+        if(count < 15 && count >= 0 ) setLetterCount(parseInt(count))
       }
       
       useEffect(()=> {
@@ -44,7 +44,13 @@ const SearchWord =  () => {
           setInputProps([])
         }
         else{
-        const dummy  = Array(letterCount).fill({style: inputStyle})
+          console.log(letterCount)
+          var dummy = []
+        if(isNaN(letterCount)) {
+          dummy  = Array(2).fill({style: inputStyle})
+          setLetterCount(2)
+        }
+        else dummy  = Array(letterCount).fill({style: inputStyle})
         var r = dummy.map((item, i) => {
           return { style: inputStyle}
         })
