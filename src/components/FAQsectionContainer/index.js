@@ -7,10 +7,10 @@ const FAQsectionContainer =  () => {
 
     return (
         <Styled.Background>
-            <Styled.Box>      <Faq/>
-</Styled.Box>
-            </Styled.Background>
-
+            <Styled.Box>
+                <Faq/>
+            </Styled.Box>
+        </Styled.Background>
     )
 }
 

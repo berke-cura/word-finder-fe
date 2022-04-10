@@ -19,12 +19,14 @@ const Layout = ({activePage}) => {
 
 return(
     <Styled.Container>
+    <Styled.Header>
     <Title/>
     <Styled.Bar>
-            <Styled.MenuItem onClick={() => setActivePage('home')}><NavLink to="/">TEXT</NavLink></Styled.MenuItem>  
-            <Styled.MenuItem onClick={() => setActivePage('faq')}><NavLink to="/faq">TEXT</NavLink></Styled.MenuItem>
-            <Styled.MenuItem onClick={() => setActivePage('contact')}><NavLink to="/contact">TEXT</NavLink></Styled.MenuItem>
+            <Styled.MenuItem  onClick={() => setActivePage('home')}><NavLink to="/" style={{ textDecoration: 'none' , color: 'black'}}>HOME</NavLink></Styled.MenuItem>  
+            <Styled.MenuItem onClick={() => setActivePage('faq')}><NavLink to="/faq" style={{ textDecoration: 'none',  color: 'black' }}>FAQ</NavLink></Styled.MenuItem>
+            <Styled.MenuItem onClick={() => setActivePage('contact')}><NavLink to="/contact" style={{ textDecoration: 'none',  color: 'black' }}>CONTACT</NavLink></Styled.MenuItem>
     </Styled.Bar>
+    </Styled.Header>
             {/* -----CONTENT----- */}
           <Layout activePage={activePage}/>
             {/* -----CONTENT----- */}

@@ -3,19 +3,15 @@ import styled from 'styled-components'
 export const TitleBox = styled.div`
     @media screen and (max-width: 767px) {
     }
-    height: auto ;
-    width: auto;
-    margin: auto ;
-    background-color: white;
+padding: 10px 30px;
+border-radius: 15px;
 `
 
 export const Title = styled.div`
     @media screen and (max-width: 767px) {
-        font-size: 13vmin;
+        font-size: 6vmin;
     }
-    color: #712B75;
     font-size: 7vmin;
-    text-align: center;
-    margin-left: 30px;
-    -webkit-text-stroke: 1px black;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
 `

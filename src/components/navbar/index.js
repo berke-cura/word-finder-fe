@@ -18,11 +18,11 @@ const NavBar =  () => {
 
             <Styled.Bar>
 
-            <Styled.MenuItem><NavLink to="../seachWord">TEXT</NavLink></Styled.MenuItem>
+            <Styled.MenuItem><NavLink to="../seachWord">HOME</NavLink></Styled.MenuItem>
                
-            <Styled.MenuItem><NavLink to="../faq">TEXT</NavLink></Styled.MenuItem>
+            <Styled.MenuItem><NavLink to="../faq">FAQ</NavLink></Styled.MenuItem>
             
-            <Styled.MenuItem><NavLink to="../contact">TEXT</NavLink></Styled.MenuItem>
+            <Styled.MenuItem><NavLink to="../contact">CONTACT</NavLink></Styled.MenuItem>
 
             </Styled.Bar>
 
