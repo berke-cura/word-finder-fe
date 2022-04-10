@@ -4,58 +4,16 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   flex-direction: row;
-  margin-top: 1.45%;
-
-  @media screen and (max-width: 768px) {
-        width: 80%;
-        padding: 10px;
-        margin: auto;
-        margin-top: 5%;
-        font-size: 15px;
-        flex-direction: column;
-      }
   display: flex;
-    &:focus {
-    
-}
 `
 
 export const InputArea = styled.div`
- @media screen and (max-width: 1024) {
-        width: 50%;
-    }
- @media screen and (max-width: 768px) {
-        width: 80%;
-        font-size: 15px;
-      }
-  background-color: #ecf0f1;
-  margin-left: 20px;
-  margin-top: 20px;
-  width: 50%;
- box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
    rgba(0, 0, 0, 0.17) 0px 12px 13px, 
    rgba(0, 0, 0, 0.09) 0px -3px 5px;
-`
-
-export const ResultContainer = styled.div`
-  background-color: #CEAB93;  
-  padding: 160px;
-  margin-left:5%;
-  margin-top: 4%;
-  border: 3px solid black;
-  border-radius: 5px;
-  grid-row: 1;
-`
-
-export const LetterBoxes = styled.div`
-grid-row:2;
-display: inline-flex;
-margin: auto;
-margin-top: 3%;
-/* background-color: #CEAB93; */  
-border-radius: 5px;
 `
 
 export const LetterInput = styled.input`
@@ -71,16 +29,9 @@ font-size: 30px;
 
 
 export const SearchButton = styled.button`
-grid-row:3;
-margin: auto;
-margin-top: 3%;
-border: 3px solid black;
-background-color: #CEAB93;
+border: 1px solid black;
 font-weight: bolder;
-font-size: 20px;
 border-radius: 5px;
-padding: 12px 24px;
-text-decoration: none;
 cursor: pointer;
 `
 
