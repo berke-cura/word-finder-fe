@@ -6,26 +6,23 @@ text-align: center;
 `
 
 export const InputForm = styled.div`
-
 `
 
 
 export const SubmitButton = styled.button`
-border-radius: 6px;
 background-color: white ;
-border: 0.5px solid black;
+border: 1px solid black;
+margin: 10px;
 margin-left: auto;
 `
 
 export const SingleInputContainer = styled.div`
 padding: 5px 10px;
-border:0.5px solid black;
-
+margin: 5px;
 `
 
 export const Input = styled.input`
-border: 0.5px solid #AD8B73;
-border-radius: 6px;
+border: 1px solid black;
 padding: 10px 10px 10px 10px;
 width: 300px;
 
@@ -39,10 +36,8 @@ font-size: 20px;
 `
 
 export const InputTextArea = styled.textarea`
-border: 1px solid #AD8B73;
-border-radius: 6px;
+border: 1px solid black;
 height: 100px;
 width: 300px;
 padding: 10px 10px 10px 10px;
-
 `
