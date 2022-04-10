@@ -2,23 +2,20 @@ import styled from 'styled-components'
 
 export const TitleBox = styled.div`
     @media screen and (max-width: 767px) {
-        margin-top: 5%;
     }
     height: auto ;
+    width: auto;
     margin: auto ;
-    margin-top: 3%;
-    background-color: #FFFBE9;
+    background-color: white;
 `
 
 export const Title = styled.div`
     @media screen and (max-width: 767px) {
         font-size: 13vmin;
-        letter-spacing: 0em;
     }
-    color: #AD8B73;
-    font-size: 10vmin;
-    font-weight: bold;
+    color: #712B75;
+    font-size: 7vmin;
     text-align: center;
-    font-family: arial;
-    letter-spacing: 0.1em;
+    margin-left: 30px;
+    -webkit-text-stroke: 1px black;
 `

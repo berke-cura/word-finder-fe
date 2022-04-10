@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const Background = styled.div`
     position: auto; 
-    background-color: #AD8B73;
+    background-color: #712B75;
 `
 
 export const Box = styled.div`
@@ -14,5 +14,5 @@ export const Box = styled.div`
     height: 100vh;
     margin: auto;
     flex-direction: row;
-    background-color: #E3CAA5;
+    background-color: white;
 `

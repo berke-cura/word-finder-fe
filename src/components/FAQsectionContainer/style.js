@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const Background = styled.div`
     position: auto; 
-    background-color: #AD8B73;
+    background-color: #712B75;
 `
 
 export const Box = styled.div`
