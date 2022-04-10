@@ -1,6 +1,4 @@
 import * as Styled from './style'
-import { Parallax } from 'react-scroll-parallax';
-import { ScrollingProvider, Section } from "react-scroll-section";
 
 const Result = () => {
     const ColoredLine = ({ color }) => (
@@ -14,40 +12,18 @@ const Result = () => {
             }}
         />
     );
-<<<<<<< HEAD
-=======
-    const SlowAndFast = () => (
-        <>
-          <Parallax speed={-5}>
-            <div className="slow" />
-          </Parallax>
-          <Parallax speed={5}>
-            <div className="fast" />
-          </Parallax>
-        </>
-      );
->>>>>>> checkpoint
     return (
         <Styled.Container>
             <Styled.ResultContainer>
                 <Styled.Title>Result</Styled.Title>
                 <ColoredLine color="#636e72"/>
                 <Styled.GradientBorder id="box" style={{display: 'flex',
-<<<<<<< HEAD
                       alignItems: 'center',
                       justifyContent: 'center',
                       width: '400px',
                       height: '200px',
                       color: 'white',
                       fontSize: '2.5rem'}}>
-=======
-  alignItems: 'center',
-  justifyContent: 'center',
-  width: '400px',
-  height: '200px',
-  color: 'white',
-  fontSize: '2.5rem'}}>
->>>>>>> checkpoint
                     Animated <br/>CSS<br/>Gradient Border
                 </Styled.GradientBorder>
 

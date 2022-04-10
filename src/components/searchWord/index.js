@@ -117,7 +117,7 @@ const SearchWord =  () => {
           <Styled.InputArea>
 
               <Styled.InputContainer>
-              <Styled.Label1>Letter Count</Styled.Label1>
+              <Styled.Label>Letter Count</Styled.Label>
                         <Styled.Group>
                           <Styled.CounterButton onClick={()=> setLetterCount(letterCount+1)}>+</Styled.CounterButton>
                                 <Styled.InputSulo min="1" max="15" type="number" name="letterCount" placeholder="1" id="logemail" autoComplete="off" value={letterCount} onChange={(event => onChangeHandle(event))} />
@@ -126,7 +126,7 @@ const SearchWord =  () => {
                         </Styled.Group>
               </Styled.InputContainer>
               <Styled.InputContainer>
-                    <Styled.Label1>Placement Letters:</Styled.Label1>
+                    <Styled.Label>Placement Letters:</Styled.Label>
                     <Styled.Group>
                         {
                           Array.from( Array(letterCount), (e, i) => {
@@ -137,7 +137,7 @@ const SearchWord =  () => {
                 </Styled.InputContainer>
                    
               <Styled.InputContainer>
-                   <Styled.Label1>Existing Letters</Styled.Label1>
+                   <Styled.Label>Existing Letters</Styled.Label>
                    <Styled.Group>
                    <Styled.InputLetters type="text" value={existLetters} name="letterCount" placeholder="a,b,c,d,e" id="logemail" autoComplete="off" onChange={(event)=> setExistLetters(event.target.value)}/>
                   </Styled.Group>
@@ -145,7 +145,7 @@ const SearchWord =  () => {
               </Styled.InputContainer>
           
               <Styled.InputContainer>
-                    <Styled.Label1>Not Existing Letters:</Styled.Label1>
+                    <Styled.Label>Not Existing Letters:</Styled.Label>
                     <Styled.Group>
                    <Styled.InputLetters type="text" name="letterCount" placeholder="a,b,c,d,e" id="logemail" autoComplete="off"  onChange={(event)=> setNotExistLetter(event.target.value)}/>
                   </Styled.Group>
