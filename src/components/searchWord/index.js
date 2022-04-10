@@ -32,20 +32,11 @@ const SearchWord =  () => {
       "boxShadow": "0 4px 8px 0 rgba(21,21,21,.2)",
     }
 
-    const handleSubmit = (event) => {
-        // prevents the submit button from refreshing the page
-        event.preventDefault();
-        //console.log(searchInfo); 
-      };
-
-
-       const handlePlacement = (string) => {
-        console.log(string)
-        //console.log(string); 
-      };
       const onChangeHandle = (event) => {
         const count = event.target.value;
-        setLetterCount(parseInt(count))
+        if(count > 16) setLetterCount(16)
+        if(count < 0) setLetterCount(0)
+        if(count < 16 && count >= 0 ) setLetterCount(count)
       }
       
       useEffect(()=> {
@@ -64,11 +55,6 @@ const SearchWord =  () => {
         let array = placementLetters
         array[value.id] = value.letter
        
-       
-      
-        //setPlacementLetters([...placementLetters, value])
-        /* setPlacementLetters(list)
-        console.log(placementLetters) */
       }
 
       function handleOnClick() {
@@ -119,9 +105,9 @@ const SearchWord =  () => {
               <Styled.InputContainer>
               <Styled.Label>Letter Count</Styled.Label>
                         <Styled.Group>
-                          <Styled.CounterButton onClick={()=> setLetterCount(letterCount+1)}>+</Styled.CounterButton>
-                                <Styled.InputSulo min="1" max="15" type="number" name="letterCount" placeholder="1" id="logemail" autoComplete="off" value={letterCount} onChange={(event => onChangeHandle(event))} />
-                          <Styled.CounterButton onClick={()=> setLetterCount(letterCount-1)}>-</Styled.CounterButton>
+                          <Styled.CounterButton onClick={()=>  letterCount< 15 ? setLetterCount(letterCount+1) : setLetterCount(letterCount)}>+</Styled.CounterButton>
+                                <Styled.InputSulo type="number" name="letterCount" placeholder="1" id="logemail" autoComplete="off" value={letterCount} onChange={(event => onChangeHandle(event))} />
+                          <Styled.CounterButton onClick={()=> letterCount > 0 ? setLetterCount(letterCount-1): setLetterCount(letterCount)}>-</Styled.CounterButton>
 
                         </Styled.Group>
               </Styled.InputContainer>
@@ -129,7 +115,8 @@ const SearchWord =  () => {
                     <Styled.Label>Placement Letters:</Styled.Label>
                     <Styled.Group>
                         {
-                          Array.from( Array(letterCount), (e, i) => {
+                          
+                          Array.from( Array(letterCount > 0 ? letterCount : 1), (e, i) => {
                             return  <LetterBox id={i} sendData={getData}/>
                         })}
                   </Styled.Group>

@@ -14,7 +14,7 @@ const LetterBox = (props) => {
 
     return (
       <>
-        <Styled.LetterBox type="text" maxLength="1" onChange={onChangeHandler} value={letter}/>
+        <Styled.LetterBox type="text" maxLength="1" onChange={onChangeHandler} value={letter} pattern="/^[a-zA-Z]+$/"/>
       </>
     )
   }
