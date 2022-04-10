@@ -10,6 +10,7 @@ const SearchWord =  () => {
     const [inputProps, setInputProps] = useState([])
     const [existLetters, setExistLetters] = useState([])
     const [notExistLetter, setNotExistLetter] = useState([])
+    const [result, setResult] = useState([])
     const [placementLetters, setPlacementLetters] = useState( Array(15).fill("-"))
     const inputStyle = {
       "padding": "13px 20px",
@@ -76,12 +77,17 @@ const SearchWord =  () => {
           }
         })
         const c = a.filter(item => item);
-
+        const b = c.filter((item) => {
+          if(item.letter !== '') {
+            return item
+          }
+        })
+        console.log(!isNaN(existLetters))
         var data = JSON.stringify({
           letterCount: letterCount,
-          existingLetter: existLetters.split(''),
-          notExistingLetter: notExistLetter.split(''),
-          letterPlace: c
+          existingLetter: !isNaN(existLetters) ?  [] : existLetters.split(''),
+          notExistingLetter: !isNaN(existLetters) ? [] :  notExistLetter.split(''),
+          letterPlace: b
         });
         
         var config = {
@@ -96,6 +102,7 @@ const SearchWord =  () => {
         
         axios(config)
         .then((response)=> {
+          setResult(response.data.words)
           console.log(JSON.stringify(response.data));
         })
         .catch( (err) => {
@@ -155,7 +162,7 @@ const SearchWord =  () => {
                     
           </Styled.InputArea>
 
-          <Result/> 
+          <Result words={result}/> 
 
         </Styled.Container>
         
