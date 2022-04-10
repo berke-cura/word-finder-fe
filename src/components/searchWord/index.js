@@ -1,6 +1,5 @@
 import * as Styled from './style'
 import React, { useState, useEffect } from 'react';
-import RICIBs from 'react-individual-character-input-boxes';
 import { SectionContainer } from '../../components'
 import LetterBox from '../LetterBox';
 import Result from '../result'
