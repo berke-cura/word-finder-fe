@@ -21,6 +21,8 @@ export const MenuItem = styled.p`
 margin: auto;
 border: 1px solid black;
 margin-right: 10px;
+font-family: 'Montserrat', sans-serif;
+padding: 5px 5px;
 &:hover {       
 }
 `

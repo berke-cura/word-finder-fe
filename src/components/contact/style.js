@@ -9,15 +9,18 @@ export const InputForm = styled.div`
 
 export const SubmitButton = styled.button`
 border-radius: 6px;
+background-color: white ;
+border: 0.5px solid black;
+margin-left: auto;
 `
 
 export const SingleInputContainer = styled.div`
 padding: 5px 10px;
-border:1px solid black;
+border:0.5px solid black;
 `
 
 export const Input = styled.input`
-border: 1px solid #AD8B73;
+border: 0.5px solid #AD8B73;
 border-radius: 6px;
 padding: 10px 10px 10px 10px;
 width: auto;

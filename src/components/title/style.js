@@ -13,4 +13,5 @@ export const Title = styled.div`
     }
     font-size: 7vmin;
     text-align: left;
+    font-family: 'Montserrat', sans-serif;
 `

@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-border: 1px solid black;
 display: flex;
 flex-direction: column;
 `
@@ -12,7 +11,7 @@ border: 1px solid black;
 `
 
 export const Text = styled.textarea`
-border: 1px solid black;
+border: 0.5px solid black;
 width: 350px;
-height: 200px;
+height: 250px;
 `
