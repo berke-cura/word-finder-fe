@@ -49,9 +49,10 @@ const Contact = () => {
                         <Styled.InputTextArea onChange={(event) => setMessage(event.target.value) } />
                     </Styled.SingleInputContainer>
                     
-                    <Styled.SubmitButton onClick={submitHandler}> Submit </Styled.SubmitButton> 
 
             </Styled.InputForm>
+            <Styled.SubmitButton onClick={submitHandler}> Submit </Styled.SubmitButton> 
+
 
       </Styled.Container>
         )
