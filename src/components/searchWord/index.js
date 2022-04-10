@@ -4,6 +4,7 @@ import RICIBs from 'react-individual-character-input-boxes';
 import { SectionContainer } from '../../components'
 import LetterBox from '../LetterBox';
 import Result from '../result'
+import axios from 'axios';
 
 const SearchWord =  () => {
     const [letterCount, setLetterCount] = useState(1)
@@ -85,7 +86,30 @@ const SearchWord =  () => {
         })
         const c = a.filter(item => item);
 
-        console.log('exact: ',c)
+        var data = JSON.stringify({
+          letterCount: letterCount,
+          existingLetter: existLetters.split(''),
+          notExistingLetter: notExistLetter.split(''),
+          letterPlace: c
+        });
+        
+        var config = {
+          method: 'post',
+          url: 'https://word-finder-backend-app.herokuapp.com/',
+          headers: { 
+            'Access-Control-Allow-Origin' : '*',
+            'Content-Type': 'application/json'
+          },
+          data : data
+        };
+        
+        axios(config)
+        .then((response)=> {
+          console.log(JSON.stringify(response.data));
+        })
+        .catch( (err) => {
+          console.log(err);
+        });
       }
   
     return (
