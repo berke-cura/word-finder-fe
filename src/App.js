@@ -3,9 +3,11 @@ import './App.css';
 import * as Styled from './style'
 import { SWsectionContainer, Title, FAQsectionContainer, COsectionContainer } from './components'
 import {NavLink} from "react-router-dom";
+import ReactGA from 'react-ga';
 
 const App = () => {
-
+  ReactGA.initialize('UA-225486609-1');
+  ReactGA.pageview(window.location.pathname + window.location.search);
 const [activePage, setActivePage ] = useState("home")
 
 const Layout = ({activePage}) => {
