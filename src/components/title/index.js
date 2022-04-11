@@ -6,7 +6,7 @@ const Title =  ({updateLayout}) => {
     }
     return (
        <Styled.TitleBox onClick={onClickHandler}>
-           <Styled.Title>WORD FINDER</Styled.Title>
+           <Styled.Title>MEVZOO <Styled.SubTitle>Advanced Word Finder</Styled.SubTitle></Styled.Title>
            </Styled.TitleBox>    
     )
 }
