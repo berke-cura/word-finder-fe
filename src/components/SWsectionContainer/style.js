@@ -6,8 +6,8 @@ export const Background = styled.div`
 `
 
 export const Box = styled.div`
-    border: 1px solid black;
+    border: 0px solid black;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 30px;
     width: max-content;
 `

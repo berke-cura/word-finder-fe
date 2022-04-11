@@ -11,6 +11,9 @@ export const Container = styled.div`
 `
 
 export const InputArea = styled.div`
+@media only screen and (max-width: 600px) {
+  margin: 0px;
+}
   border: 1px solid green;
   margin: 10px;
 `
@@ -19,6 +22,7 @@ export const Label = styled.label`
 text-align: center;
 border: 1px solid black;
 margin: 10px;
+font-size: 30px;
 `
 
 export const InputContainer = styled.div`
@@ -29,27 +33,27 @@ border: 1px solid red;
 `
 
 export const Group = styled.div`
-display:flex;
-justify-content: center;
-border: 1px solid blue;
-margin: 10px;
+display:inline-block;
+margin: auto;
+border: 0px solid blue;
 `
 
 export const GroupB = styled.div`
 @media only screen and (max-width: 600px) {
-  width: 270px;
+  width: 320px;
 }
 text-align: center;
-border: 1px solid blue;
+border: 0px solid blue;
 margin: 10px;
-width: 350px;
+width: 450px;
 `
 
 export const InputSulo = styled.input`
 border: 1px solid black;
 margin: 10px;
-height: 35px;
-width: 35px;
+font-size: 30px;
+width: 50px;
+height: 50px;
 text-align: center;
 ::-webkit-inner-spin-button{
   -webkit-appearance: none; }
@@ -58,18 +62,20 @@ text-align: center;
 `
 
 export const SubmitButton = styled.button`
-border: 1px solid purple;
+border: 3px solid purple;
 cursor: pointer;
 margin: 10px;
+font-size: 30px;
 `
 
 export const CounterButton = styled.button`
-margin: 10px;
-height: 35px;
-width: 35px;
-border-radius: 100px;
-border: 1px solid red;
+border-radius: 500px;
+border: 2px solid red;
 background-color: white;
+font-family: bolder;
+font-size: 35px;
+height: fit-content;
+width: 55px;
 &:hover {
 };
 `
@@ -79,5 +85,6 @@ text-align: center;
 border-radius: 4px;
 border: 1px solid red;
 margin: 10px;
+font-size: 30px;
 `
 

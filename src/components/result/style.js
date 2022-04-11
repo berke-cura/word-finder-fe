@@ -8,6 +8,7 @@ text-align: center;
 
 export const Title = styled.div`
 margin: 20px;
+font-size: 30px;
 border: 1px solid purple;
 text-align: center;    
 `
@@ -15,10 +16,10 @@ text-align: center;
 export const ResultContainer = styled.textarea`
 margin-left: 20px;
 margin-right: 20px;
-border: 1px solid blue;
-font-size: 20px;
+border: 3px solid blue;
+font-size: 30px;
 text-align: center;
 resize: none;
-height: 30rem;
+height: 34rem;
 width: 15rem;
 `

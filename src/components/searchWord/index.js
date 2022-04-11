@@ -118,9 +118,9 @@ const SearchWord =  () => {
               <Styled.InputContainer>
               <Styled.Label>Letter Count</Styled.Label>
                         <Styled.Group>
-                          <Styled.CounterButton onClick={()=>  letterCount< 15 ? setLetterCount(letterCount+1) : setLetterCount(letterCount)}>+</Styled.CounterButton>
+                          <Styled.CounterButton onClick={()=>  letterCount > 0 ? setLetterCount(letterCount-1) : setLetterCount(letterCount)}>-</Styled.CounterButton>
                                 <Styled.InputSulo type="number" name="letterCount" placeholder="1" id="logemail" autoComplete="off" value={letterCount} onChange={(event => onChangeHandle(event))} />
-                          <Styled.CounterButton onClick={()=> letterCount > 0 ? setLetterCount(letterCount-1): setLetterCount(letterCount)}>-</Styled.CounterButton>
+                          <Styled.CounterButton onClick={()=> letterCount < 15 ? setLetterCount(letterCount+1): setLetterCount(letterCount)}>+</Styled.CounterButton>
 
                         </Styled.Group>
               </Styled.InputContainer>

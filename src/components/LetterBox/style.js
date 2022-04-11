@@ -9,6 +9,7 @@ export const LetterBox = styled.input.attrs({
   text-align: center;
   margin: 10px 5px;
   border: 1px solid black;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
 `
