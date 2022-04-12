@@ -1,4 +1,5 @@
 import * as Styled from './style'
+import { Helmet } from 'react-helmet'
 
 
 const Title =  ({updateLayout}) => {
@@ -7,7 +8,12 @@ const Title =  ({updateLayout}) => {
     }
     return (
        <Styled.TitleBox onClick={onClickHandler}>
-           <Styled.Title>WORD FINDER</Styled.Title>
+           <Helmet>
+           <title>MEVZOO</title> 
+           <meta name="description" content="App Description" />
+           </Helmet>
+
+           <Styled.Title>MEVZOO <Styled.SubTitle>Advanced Word Finder</Styled.SubTitle></Styled.Title>
            </Styled.TitleBox>    
     )
 }
