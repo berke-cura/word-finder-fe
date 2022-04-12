@@ -1,5 +1,6 @@
 import * as Styled from './style'
 
+
 const Title =  ({updateLayout}) => {
     function onClickHandler () {
         updateLayout('home')
