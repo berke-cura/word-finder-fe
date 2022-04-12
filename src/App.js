@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import DocumentMeta from 'react-document-meta';
 import './App.css';
 import * as Styled from './style'
 import { SWsectionContainer, Title, FAQsectionContainer, COsectionContainer } from './components'
@@ -23,19 +22,8 @@ const App = () => {
   function updateLayout (string) {
     if(string==='home') setActivePage('home')
   }
-  const meta = {
-    title: 'Mevzoo Word Finder',
-    description: 'Word finder app with letter conditions',
-    meta: {
-        charset: 'utf-8',
-        name: {
-            keywords: 'word,finder,scrabble,wordle,wordscapes'
-        }
-    }
-  }
-
+  
 return(
-  <DocumentMeta {...meta}>
     <Styled.Container>
     <Styled.Header>
     <Title updateLayout={updateLayout}/>
@@ -50,7 +38,6 @@ return(
             {/* -----CONTENT----- */}
 
     </Styled.Container>
-    </DocumentMeta>
   )
 }
 
