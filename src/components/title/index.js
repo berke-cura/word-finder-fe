@@ -1,6 +1,6 @@
 import * as Styled from './style'
-import { Helmet } from 'react-helmet'
-
+/* import { Helmet } from 'react-helmet'
+ */
 
 const Title =  ({updateLayout}) => {
     function onClickHandler () {
@@ -8,10 +8,10 @@ const Title =  ({updateLayout}) => {
     }
     return (
        <Styled.TitleBox onClick={onClickHandler}>
-           <Helmet>
+{/*            <Helmet>
            <title>MEVZOO</title> 
            <meta name="description" content="App Description" />
-           </Helmet>
+           </Helmet> */}
 
            <Styled.Title>MEVZOO <Styled.SubTitle>Advanced Word Finder</Styled.SubTitle></Styled.Title>
            </Styled.TitleBox>    
