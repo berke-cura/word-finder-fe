@@ -119,7 +119,7 @@ const SearchWord =  () => {
               <Styled.Label>Letter Count</Styled.Label>
                         <Styled.Group>
                           <Styled.CounterButton onClick={()=>  letterCount > 0 ? setLetterCount(letterCount-1) : setLetterCount(letterCount)}>-</Styled.CounterButton>
-                                <Styled.InputSulo type="number" name="letterCount" placeholder="1" id="logemail" autoComplete="off" value={letterCount} onChange={(event => onChangeHandle(event))} />
+                                <Styled.InputSulo type="number" name="letterCount" placeholder="1" id="letterCount" autoComplete="off" value={letterCount} onChange={(event => onChangeHandle(event))} />
                           <Styled.CounterButton onClick={()=> letterCount < 15 ? setLetterCount(letterCount+1): setLetterCount(letterCount)}>+</Styled.CounterButton>
 
                         </Styled.Group>
@@ -132,7 +132,7 @@ const SearchWord =  () => {
               <Styled.InputContainer>
                    <Styled.Label>Existing Letters</Styled.Label>
                    <Styled.Group>
-                   <Styled.InputLetters type="text" value={existLetters} name="letterCount" placeholder="a,b,c,d,e" id="logemail" autoComplete="off" onChange={(event)=> setExistLetters(event.target.value)}/>
+                   <Styled.InputLetters type="text" value={existLetters} name="letterCount" placeholder="a,b,c,d,e" id="existing" autoComplete="off" onChange={(event)=> setExistLetters(event.target.value)}/>
                   </Styled.Group>
                    
               </Styled.InputContainer>
@@ -140,7 +140,7 @@ const SearchWord =  () => {
               <Styled.InputContainer>
                     <Styled.Label>Not Existing Letters:</Styled.Label>
                     <Styled.Group>
-                   <Styled.InputLetters type="text" name="letterCount" placeholder="a,b,c,d,e" id="logemail" autoComplete="off"  onChange={(event)=> setNotExistLetter(event.target.value)}/>
+                   <Styled.InputLetters type="text" name="letterCount" placeholder="a,b,c,d,e" id="notExisting" autoComplete="off"  onChange={(event)=> setNotExistLetter(event.target.value)}/>
                   </Styled.Group>
                   
                 </Styled.InputContainer>

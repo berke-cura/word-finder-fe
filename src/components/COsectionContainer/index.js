@@ -8,6 +8,7 @@ const COsectionContainer =  () => {
     return (
         <Styled.Background>
             <Styled.Box>
+                <Styled.Title>Contact</Styled.Title>
                 <Contact/>
             </Styled.Box>
         </Styled.Background>

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 
 export const Container = styled.div`
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   flex-direction: column;
 }
   flex-direction: row;
@@ -40,7 +40,7 @@ border: 0px solid blue;
 
 export const GroupB = styled.div`
 @media only screen and (max-width: 600px) {
-  width: 320px;
+  width: 20rem;
 }
 text-align: center;
 border: 0px solid blue;

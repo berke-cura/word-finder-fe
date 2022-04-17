@@ -16,8 +16,8 @@ const Contact = () => {
             subject,
             message
         }
-        const url = "https://backend_url"
-
+/*         const url = "https://backend_url"
+ */
         console.log(body)
         // Axios Request
     } 
@@ -28,7 +28,7 @@ const Contact = () => {
 
             <Styled.InputForm>
 
-                
+                    
                     <Styled.SingleInputContainer>
                         <Styled.InputTitle>Name</Styled.InputTitle>
                         <Styled.Input onChange={(event) => setName(event.target.value) }/> 

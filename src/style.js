@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+@media screen and (max-width: 450px) {
+    width: max-content;
+}
 background-color: white;
 margin-bottom: 10px;
 `

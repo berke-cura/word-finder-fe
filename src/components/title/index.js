@@ -13,7 +13,7 @@ const Title =  ({updateLayout}) => {
            <meta name="description" content="App Description" />
            </Helmet> */}
 
-           <Styled.Title>MEVZOO <Styled.SubTitle>Advanced Word Finder</Styled.SubTitle></Styled.Title>
+           <Styled.Title>GETWORD <Styled.SubTitle>Advanced Word Finder</Styled.SubTitle></Styled.Title>
            </Styled.TitleBox>    
     )
 }
